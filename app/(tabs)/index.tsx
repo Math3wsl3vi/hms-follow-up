@@ -1,8 +1,9 @@
 import { useNavigation } from 'expo-router';
 import React, { useEffect } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { ScrollView } from 'react-native';
 import Dates from '~/components/home/Dates';
 import Illustration from '~/components/home/Illustration';
+import RemindersList from '~/components/home/RemindersList';
 import TopPart from '~/components/home/TopPart';
 
 const Home = () => {
@@ -13,7 +14,7 @@ const Home = () => {
     });
   }, []);
   return (
-    <SafeAreaView className='p-2 bg-white h-screen'>
+    <ScrollView className='p-2 bg-white h-screen'>
       {/* top part */}
       <TopPart/>
       {/* illustration */}
@@ -21,7 +22,8 @@ const Home = () => {
       {/* calendar */}
       <Dates/>
       {/* reminders */}
-    </SafeAreaView>
+      <RemindersList/>
+    </ScrollView>
   );
 };
 

@@ -7,8 +7,8 @@ const TopPart = () => {
       <View>
         <Image source={require('./../../assets/menu.png')} className='w-6 h-6'/>
       </View>
-      <View>
-      <Image source={require('./../../assets/user.png')} className='w-7 h-7'/>
+      <View className='border rounded-full p-2 border-gray-400'>
+      <Image source={require('./../../assets/user.png')} className='w-5 h-5'/>
       </View>
     </View>
   );
