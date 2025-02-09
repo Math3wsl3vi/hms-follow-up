@@ -1,23 +1,28 @@
-import { Stack } from 'expo-router';
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { useNavigation } from 'expo-router';
+import React, { useEffect } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Dates from '~/components/home/Dates';
+import Illustration from '~/components/home/Illustration';
+import TopPart from '~/components/home/TopPart';
 
-import { ScreenContent } from '~/components/ScreenContent';
-
-export default function Home() {
+const Home = () => {
+  const navigation = useNavigation();
+  useEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
   return (
-    <>
-      <Stack.Screen options={{ title: 'Tab One' }} />
-      <View style={styles.container}>
-        <ScreenContent path="app/(tabs)/index.tsx" title="Tab One" />
-      </View>
-    </>
+    <SafeAreaView className='p-2 bg-white h-screen'>
+      {/* top part */}
+      <TopPart/>
+      {/* illustration */}
+      <Illustration/>
+      {/* calendar */}
+      <Dates/>
+      {/* reminders */}
+    </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 24,
-  },
-});
+export default Home;

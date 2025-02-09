@@ -3,7 +3,6 @@
     "name": "hms-follow-up",
     "slug": "hms-follow-up",
     "version": "1.0.0",
-
     "scheme": "hms-follow-up",
     "web": {
       "bundler": "metro",
@@ -13,15 +12,14 @@
     "plugins": ["expo-router"],
     "experiments": {
       "typedRoutes": true,
-
       "tsconfigPaths": true
     },
-
+    "experimental": {
+      "newArchEnabled": true
+    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

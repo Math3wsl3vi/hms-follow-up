@@ -22,6 +22,7 @@
     "expo-system-ui": "~4.0.8",
     "expo-web-browser": "~14.0.2",
     "firebase": "^10.5.2",
+    "font": "^0.0.4",
     "nativewind": "latest",
     "react": "18.3.1",
     "react-dom": "18.3.1",
