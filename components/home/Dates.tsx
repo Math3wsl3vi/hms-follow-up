@@ -16,7 +16,7 @@ const Dates = () => {
     const date = (new Intl.DateTimeFormat('en-Us',{dateStyle: 'full'})).format(now)
   return (
     <View className='mt-4 p-2'>
-      <Text className='text-2xl text-gray-400' style={{fontFamily: 'popSb'}}>{date}</Text>
+      <Text className='text-2xl text-gray-500' style={{fontFamily: 'popSb'}}>{date}</Text>
       <FlatList 
       horizontal
       data={DateData}
